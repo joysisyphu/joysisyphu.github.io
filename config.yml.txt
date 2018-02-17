@@ -1,0 +1,96 @@
+# Site settings 配置站点
+title: Joysisyphus Blog
+SEOTitle: Joysisyphus Blog
+header-img: img/post-bg-desk.jpg
+email: ymatustc@gmail.com
+description: "Our world is just another screen"
+keyword: "Joysisyphus, Joysisyphus Blog, 马太, App, Movie, Music , iOS, Apple, iPhone"
+url: "MySadCaptain.github.io"          # your host, for absolute URL
+baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+github_repo: "https://github.com/MySadCaptain/MySadCaptain.github.io" # you code repository
+
+# if you don't need baseurl, you should leave this value blank.
+baseurl: ''
+
+# Navigation links
+nav:
+  home: '/'
+  tags: '/tags.html'
+
+# Footer
+footer:
+  since: 2017
+
+# Author 配置博主信息
+author: 'Matt'
+# nickname: '悟空'
+bio: '影迷/乐迷/精酿啤酒爱好者'
+avatar: '/assets/img/profile.png'
+
+# Search
+search: true
+
+# Night mode
+nightMode: false
+
+# Comments
+disqus: true
+disqus_url: 'https://joysisyphus.disqus.com/embed.js'
+
+# livere: true
+# livere_uid: MTAyMC8yODEwMC80Njcz
+
+# Reward 赞赏功能 by Ray-Eldath
+# reward:
+#   enable: true
+#   reward_comment: '真诚赞赏 手有余香'
+#   wechatpay: 'http://ray-eldath.image.alimmdn.com/basic/wechatpay.jpg'
+#   alipay: 'http://ray-eldath.image.alimmdn.com/basic/alipay.jpg'
+
+# b2t 回到顶部 by Ray-Eldath
+b2t: true
+
+# Share
+social-share: false
+social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+
+# theme color 主题皮肤
+theme-color: 'default'  # pink or default
+
+# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
+postPatterns: 'circuitBoard'
+
+# SNS settings 配置社交网站url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
+sns:
+  email: 'mailto:ymatustc@gmail.com'
+  # weibo: '//weibo.com/61727840/'
+  zhihu: 'https://www.zhihu.com/people/yang_min'
+  # juejin: '//juejin.im/user/57a6f434165abd006159b4cc'
+  instagram: '//www.instagram.com/joysisyphus'
+  # github: '//github.com/kaeyleo'
+  douban: 'https://www.douban.com/people/61727840/'
+
+# Tags 设置标签
+recommend-tags: true # whether or not display recommend-tags on the sidebar
+recommend-condition-size: 5 # a tag will be recommended if the size of it is more than this value
+
+# Build settings
+paginate: 20
+paginate_path: 'page:num'
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+# RSS
+RSS: true
+
+# Permalink
+# See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
+permalink: /:year/:month/:day/:title.html
+
+# Plugins
+plugins: [jekyll-paginate]
