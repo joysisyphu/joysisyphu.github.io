@@ -1,0 +1,3 @@
+#!/bin/bash
+module load flask/0.12
+FLASK_APP=hello.py flask run --port=5001

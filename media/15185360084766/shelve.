@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+from argparse import ArgumentParser
+import shelve, ast
+
+FNAME='shelve.db'
+
+p = ArgumentParser(description='minimal key/value database')
+p.add_argument('-p', '--put', nargs=2, metavar=('KEY','VALUE'),
+               help='add a key/value pair')
+p.add_argument('-g', '--get', metavar=('KEY'),
+               help='get entry given by KEY')
+p.add_argument('-d', '--delete', metavar=('KEY'),
+               help='delete entry given by KEY')
+p.add_argument('-s', '--show', action='store_true', 
+               help='show database')
+
+a = p.parse_args()
+
+db = shelve.open(FNAME)
+
+if a.put:
+    key, value = a.put
+    db[key] = ast.literal_eval(value)
+
+if a.get:
+    key = a.get
+    print(db[key])
+
+if a.delete:
+    key = a.delete
+    del db[key]
+
+if a.show:
+    for key in sorted(db.keys()):
+        print('%-10s %s' % (key, db[key]))
+
+db.close()
